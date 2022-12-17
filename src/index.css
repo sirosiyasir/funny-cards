@@ -1,13 +1,213 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --card-color: radial-gradient(#000, #90a17d);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ELEMENTS */
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: #e0e0e0;
+}
+
+h3 {
+  padding-top: 30px;
+}
+
+p {
+  display: block;
+  margin-top: 35px;
+}
+
+/* CLASSES AND ID SELECTORS */
+.active {
+  display: none;
+}
+
+.about {
+  background-image: linear-gradient(#e0e0e0, #fff);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  height: 335px;
+  padding-block: 33px;
+  display: none;
+}
+
+.battle {
+  background-image: linear-gradient(#90a17d, #9ba17b);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  height: 335px;
+  padding-block: 33px;
+  display: none;
+}
+
+.battle-img-first {
+  display: inline-block;
+  position: absolute;
+  top: 89%;
+  left: 25%;
+  width: 2.5rem;
+  height: 2.5rem;
+  /* background-color: azure; */
+  cursor: pointer;
+}
+.battle-img-second {
+  display: inline-block;
+  position: absolute;
+  top: 89%;
+  right: 25%;
+  width: 2.5rem;
+  height: 2.5rem;
+  /* background-color: azure; */
+  cursor: pointer;
+}
+
+.battle-img-first:active,
+.battle-img-second:active {
+  transform: scale(0.98);
+}
+
+/* OMER BATTLE */
+#omer-battle .kahpelik,
+#omer-battle .zeka,
+#omer-battle .motosiklet,
+#omer-battle .şans {
+  color: #fff;
+  background-image: var(--card-color);
+}
+
+#omer-battle .kahpelik {
+  width: 50%;
+}
+
+#omer-battle .zeka {
+  width: 40%;
+}
+
+#omer-battle .motosiklet {
+  width: 70%;
+}
+
+#omer-battle .şans {
+  width: 90%;
+}
+
+/* CAGRI BATTLE */
+#cagrı-battle .kahpelik,
+#cagrı-battle .zeka,
+#cagrı-battle .motosiklet,
+#cagrı-battle .şans {
+  color: #fff;
+  background-image: var(--card-color);
+}
+
+#cagrı-battle .kahpelik {
+  width: 70%;
+}
+
+#cagrı-battle .zeka {
+  width: 39%;
+}
+
+#cagrı-battle .motosiklet {
+  width: 80%;
+  background: transparent;
+  text-align: left;
+  padding-inline-start: 10px;
+}
+
+#cagrı-battle .şans {
+  width: 70%;
+}
+
+/* DOGI BATTLE */
+#dogi-battle .kahpelik,
+#dogi-battle .zeka,
+#dogi-battle .motosiklet,
+#dogi-battle .şans {
+  color: #fff;
+  background-image: var(--card-color);
+}
+
+#dogi-battle .kahpelik {
+  width: 200%;
+  text-align: left;
+  padding-inline-start: 20px;
+}
+
+#dogi-battle .zeka {
+  width: 39%;
+}
+
+#dogi-battle .motosiklet {
+  width: 90%;
+}
+
+#dogi-battle .şans {
+  width: 50%;
+  background: transparent;
+}
+
+/* YASIR BATTLE */
+#yasir-battle .kahpelik,
+#yasir-battle .zeka,
+#yasir-battle .motosiklet,
+#yasir-battle .şans {
+  color: #fff;
+  background-image: var(--card-color);
+}
+
+#yasir-battle .kahpelik {
+  width: 70%;
+  background: transparent;
+}
+
+#yasir-battle .zeka {
+  width: 100%;
+}
+
+#yasir-battle .motosiklet {
+  width: 100%;
+}
+
+#yasir-battle .şans {
+  width: 50%;
+}
+
+.cards {
+  position: relative;
+}
+
+#ömer-img,
+#cagrı-img,
+#yasir-img,
+#dogi-img {
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+/* IMAGES */
+.our-img {
+  width: 300px;
+  height: 400px;
+  border-radius: 2rem;
+  border-bottom: 70px solid #425969;
+}
+
+.ourcards {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.names {
+  margin-bottom: 30px;
+  margin-top: 100px;
 }
