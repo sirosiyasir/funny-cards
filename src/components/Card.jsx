@@ -1,10 +1,5 @@
 import React from "react"
-import {
-  infoClick,
-  battleClick,
-  removeAboutClass,
-  removeBattleClass,
-} from "../script"
+import { infoClick, battleClick } from "../script"
 
 function Card(props) {
   return (
@@ -14,6 +9,7 @@ function Card(props) {
           <h1 className="names">{props.name}</h1>
 
           <div className="our-img">
+            <div></div>
             <img
               id={props.imgId}
               //burada style background img'le foto vardı
@@ -48,7 +44,6 @@ function Card(props) {
             <img
               onClick={() => {
                 battleClick()
-                removeAboutClass()
               }}
               className="battle-img-first"
               src="images/battle.png"
@@ -57,7 +52,6 @@ function Card(props) {
             <img
               onClick={() => {
                 infoClick()
-                removeBattleClass()
               }}
               className="battle-img-second"
               src="images/man.png"
@@ -70,4 +64,25 @@ function Card(props) {
   )
 }
 
-export default Card
+function createCard(personality) {
+  return (
+    <Card
+      key={personality.id}
+      name={personality.name}
+      imgId={personality.imgId}
+      imgSrc={personality.imgSrc}
+      aboutId={personality.aboutId}
+      battleId={personality.battleId}
+      kahpelik={personality.kahpelik}
+      zeka={personality.zeka}
+      motosiklet={personality.motosiklet}
+      sans={personality.sans}
+      personalityOne={personality.personalityOne}
+      personalityTwo={personality.personalityTwo}
+      personalityThree={personality.personalityThree}
+      personalityFour={personality.personalityFour}
+    />
+  )
+}
+
+export default createCard

@@ -6,8 +6,8 @@ import Personality from "./Personality"
   var ability = document.querySelectorAll(".battle-img-first") */
 
 /* OMER CARD */
-console.log(Personality)
-const infoClick = function () {
+
+function infoClick() {
   for (let i = 0; i < Personality.length; i++) {
     var img = document.getElementById(`${Personality[i].imgId}`)
     var about = document.getElementById(`${Personality[i].aboutId}`)
@@ -21,7 +21,7 @@ const infoClick = function () {
     removeBattleClass()
   }
 }
-const battleClick = function () {
+function battleClick() {
   for (let i = 0; i < Personality.length; i++) {
     var img = document.getElementById(`${Personality[i].imgId}`)
     var battle = document.getElementById(`${Personality[i].battleId}`)
@@ -36,18 +36,18 @@ const battleClick = function () {
   }
 }
 
-const removeAboutClass = function () {
+function removeAboutClass() {
   for (let i = 0; i < Personality.length; i++) {
     var about = document.getElementById(`${Personality[i].aboutId}`)
     about.style.display = "none"
   }
 }
 
-const removeBattleClass = function () {
+function removeBattleClass() {
   for (let i = 0; i < Personality.length; i++) {
     var battle = document.getElementById(`${Personality[i].battleId}`)
     battle.style.display = "none"
   }
 }
 
-export { infoClick, battleClick, removeAboutClass, removeBattleClass }
+export { infoClick, battleClick }
