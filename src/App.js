@@ -1,16 +1,24 @@
-import React from "react"
-import createCard from "./components/Card"
-// Attributesler'ı import ediyorum
-import Personality from "./Personality"
+// Yeni sayfalar oluşturmak için react-router-dom 'u npm'le install ediyor ve app.js'e importluyorum
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Omer from "./components/boys/Omer"
+import Cagri from "./components/boys/Cagri"
+import Dogi from "./components/boys/Dogi"
+import Yasir from "./components/boys/Yasir"
+import Navbar from "./components/Navbar"
 
-function App(props) {
+function App() {
   return (
-    <div>
-      {/* .map yönetimini kullanarak, her bir kişi için(toplamda 4) bir adet <Card /> oluşturup ve yine her bir <Card />'ı attributes'lerle doldurmak yerine
-    tek bir function içerisinde bir <Card /> oluşturdum ve onu attributesler'le doldurdum daha sonra Personality(objectlerin bulunduğu dosya)'de kaç
-    adet object bulunuyorsa createCard function'unu her biri için döndürmesini sağlattım (.map yöntemi sayesinde) */}
-      {Personality.map(createCard)}
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Omer />} />
+          <Route path="/cagri" element={<Cagri />} />
+          <Route path="/dogi" element={<Dogi />} />
+          <Route path="/yasir" element={<Yasir />} />
+        </Routes>
+        <Navbar />
+      </Router>
+    </>
   )
 }
 export default App

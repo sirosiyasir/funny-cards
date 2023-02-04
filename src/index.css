@@ -16,7 +16,6 @@ h3 {
 
 p {
   display: block;
-  margin-top: 35px;
 }
 
 /* CLASSES AND ID SELECTORS */
@@ -45,7 +44,7 @@ p {
 .battle-img-first {
   display: inline-block;
   position: absolute;
-  top: 89%;
+  top: 90%;
   left: 25%;
   width: 2.5rem;
   height: 2.5rem;
@@ -55,7 +54,7 @@ p {
 .battle-img-second {
   display: inline-block;
   position: absolute;
-  top: 89%;
+  top: 90%;
   right: 25%;
   width: 2.5rem;
   height: 2.5rem;
@@ -207,7 +206,56 @@ p {
   position: relative;
 }
 
+.ourcards p {
+  margin-top: 35px;
+}
+
 .names {
   margin-bottom: 30px;
   margin-top: 100px;
+}
+
+/* NAVBAR */
+
+li img {
+  border-radius: 1.5rem;
+}
+
+li p {
+  margin-top: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 85px;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarNav {
+  width: 100%;
+  margin-top: 0.75rem;
+  overflow-y: hidden;
+}
+
+.navbarListItems {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbarListItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

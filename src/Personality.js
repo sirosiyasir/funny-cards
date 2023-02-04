@@ -1,11 +1,10 @@
-import React from "react"
 // App.js'te <Card />' ekleyeceğim attributesler'i tek bir variable object olarak topluyorum
 const Personality = [
   {
-    id: 1,
+    id: 0,
     name: "Ömer Çetin(s)",
     imgId: "ömer-img",
-    imgSrc: "images/ömer-img.jpeg",
+    imgSrc: "images/omer-img.jpeg",
     aboutId: "about-omer",
     battleId: "omer-battle",
     kahpelik: "Kahpelik: %50",
@@ -18,7 +17,7 @@ const Personality = [
     personalityFour: "KELLİK",
   },
   {
-    id: 2,
+    id: 1,
     name: "Çağrı Genç",
     imgId: "cagrı-img",
     imgSrc: "images/cagrı-img.jpeg",
@@ -34,7 +33,7 @@ const Personality = [
     personalityFour: "CAMEL İÇEBİLMEK",
   },
   {
-    id: 3,
+    id: 2,
     name: "Doğukan Güler",
     imgId: "dogi-img",
     imgSrc: "images/dogi-img.jpeg",
@@ -50,7 +49,7 @@ const Personality = [
     personalityFour: "TELEFON AÇMAMA",
   },
   {
-    id: 4,
+    id: 3,
     name: "Yasir Ç.",
     imgId: "yasir-img",
     imgSrc: "images/yasir-img.jpeg",
