@@ -1,9 +1,10 @@
-//Vanilla js'i import ediyorum
-import { infoClick, battleClick } from "../../script.js"
 // Kişilik özelliklerini kaydettiğim objecti import ediyorum
 import Personality from "../../Personality"
+import { useState } from "react"
 
 function Yasir() {
+  const [battle, setBattle] = useState(false)
+  const [info, setInfo] = useState(false)
   return (
     <div className="container-fluid">
       <div className="ourcards">
@@ -12,19 +13,26 @@ function Yasir() {
 
           <div className="our-img">
             <img
+              className={battle | info ? "display-none" : "display-block"}
               id={Personality[3].imgId}
               src={Personality[3].imgSrc}
               alt="Yasir Çeşmeci"
             />
 
-            <div className="about" id={Personality[3].aboutId}>
+            <div
+              className={`about ${info && "display-block"}`}
+              id={Personality[3].aboutId}
+            >
               <h3>ÖZELLİKLER</h3>
               <p>{Personality[3].personalityOne}</p>
               <p>{Personality[3].personalityTwo}</p>
               <p>{Personality[3].personalityThree}</p>
               <p>{Personality[3].personalityFour}</p>
             </div>
-            <div className="battle" id={Personality[3].battleId}>
+            <div
+              className={`battle ${battle && "display-block"}`}
+              id={Personality[3].battleId}
+            >
               <h3>YETENEKLER</h3>
               <div className="kahpelik">
                 <p>{Personality[3].kahpelik}</p>
@@ -44,7 +52,8 @@ function Yasir() {
           <div>
             <img
               onClick={() => {
-                battleClick("3")
+                setBattle((prevState) => !prevState)
+                setInfo(false)
               }}
               className="battle-img-first"
               src="images/battle.png"
@@ -52,7 +61,8 @@ function Yasir() {
             />
             <img
               onClick={() => {
-                infoClick("3")
+                setInfo((prevState) => !prevState)
+                setBattle(false)
               }}
               className="battle-img-second"
               src="images/man.png"

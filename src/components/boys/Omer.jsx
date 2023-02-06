@@ -1,9 +1,10 @@
-//Vanilla js'i import ediyorum
-import { infoClick, battleClick } from "../../script.js"
 // Kişilik özelliklerini kaydettiğim objecti import ediyorum
 import Personality from "../../Personality"
+import { useState } from "react"
 
 function Omer() {
+  const [battle, setBattle] = useState(false)
+  const [info, setInfo] = useState(false)
   return (
     <div className="container-fluid">
       <div className="ourcards">
@@ -12,19 +13,26 @@ function Omer() {
 
           <div className="our-img">
             <img
+              className={battle | info ? "display-none" : "display-block"}
               id={Personality[0].imgId}
               src={Personality[0].imgSrc}
               alt="Ömer Çetin"
             />
 
-            <div className="about" id={Personality[0].aboutId}>
+            <div
+              className={`about ${info && "display-block"}`}
+              id={Personality[0].aboutId}
+            >
               <h3>ÖZELLİKLER</h3>
               <p>{Personality[0].personalityOne}</p>
               <p>{Personality[0].personalityTwo}</p>
               <p>{Personality[0].personalityThree}</p>
               <p>{Personality[0].personalityFour}</p>
             </div>
-            <div className="battle" id={Personality[0].battleId}>
+            <div
+              className={`battle ${battle && "display-block"}`}
+              id={Personality[0].battleId}
+            >
               <h3>YETENEKLER</h3>
               <div className="kahpelik">
                 <p>{Personality[0].kahpelik}</p>
@@ -44,7 +52,8 @@ function Omer() {
           <div>
             <img
               onClick={() => {
-                battleClick("0")
+                setBattle((prevState) => !prevState)
+                setInfo(false)
               }}
               className="battle-img-first"
               src="images/battle.png"
@@ -52,7 +61,8 @@ function Omer() {
             />
             <img
               onClick={() => {
-                infoClick("0")
+                setInfo((prevState) => !prevState)
+                setBattle(false)
               }}
               className="battle-img-second"
               src="images/man.png"

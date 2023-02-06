@@ -67,6 +67,18 @@ p {
   transform: scale(0.98);
 }
 
+.cards {
+  position: relative;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
 /* OMER BATTLE */
 #omer-battle .kahpelik,
 #omer-battle .zeka,
@@ -130,7 +142,7 @@ p {
 }
 
 #dogi-battle .kahpelik {
-  width: 200%;
+  width: 100%;
   text-align: left;
   padding-inline-start: 20px;
 }
@@ -172,10 +184,6 @@ p {
 
 #yasir-battle .şans {
   width: 50%;
-}
-
-.cards {
-  position: relative;
 }
 
 #ömer-img,
